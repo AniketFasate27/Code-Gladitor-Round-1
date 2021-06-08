@@ -1,0 +1,27 @@
+
+def main(str1,str2):
+    if len(str2) > len(str1):
+        return "NEGATIVE"
+
+    i = 0
+    j = 0
+    while i < len(str2) and j < len(str1):
+        if str2[i] == str1[j]:
+            j +=1
+            i +=1
+        else:
+            j+=1
+
+    if i>=len(str2):
+        return "POSITIVE"
+    else:
+        return "NEGATIVE"
+
+ # Write code here 
+
+vcomp = input().lower()
+t = int(input())
+for _ in range(t):
+    bloodcomp = input().lower()
+    print(main(vcomp,bloodcomp))
+
